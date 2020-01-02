@@ -1,0 +1,48 @@
+<img class="wave" src="../../../assets/img/login/w1.png" alt="">
+<div class="container1">
+    <div class="img">
+        <img src="../../../assets/img/login/bg4.svg" alt="">
+    </div>
+    <div class="login-container">
+        <form role="form" [formGroup]="formRegister" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <img class="avatar" src="../../../assets/img/login/avatar.svg" alt="">
+            <h2>Register</h2>
+            <div class="input-div one focus">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <input class="input" type="text" formControlName="name" autocomplete="name" placeholder="Name">
+                </div>
+            </div>
+            <div class="input-div one focus">
+                <div class="i">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <input class="input" type="email" formControlName="email" value="" autocomplete="email" placeholder="E-mail">
+                </div>
+            </div>
+            <div class="input-div two focus">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <input class="input" type="password" formControlName="password1" type="password" autocomplete="off" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="input-div two focus">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <input class="input" type="password" formControlName="password2" autocomplete="off" placeholder="Confirm Password">
+                </div>
+            </div>
+            <a href="#">Forgot Password?</a>
+            <input type="submit" class="btn" value="register" [disabled]="!formRegister.valid">
+        </form>
+
+    </div>
+</div>

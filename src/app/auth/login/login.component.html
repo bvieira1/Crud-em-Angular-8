@@ -1,0 +1,34 @@
+<img class="wave" src="../../../assets/img/login/w1.png" alt="">
+<div class="container1">
+    <div class="img">
+        <img src="../../../assets/img/login/bg3.svg" alt="">
+    </div>
+    <div class="login-container">
+        <form role="form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <img class="avatar" src="../../../assets/img/login/avatar.svg" alt="">
+            <h2>Login</h2>
+            <div class="input-div one focus">
+                <div class="i">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <input class="input" formControlName="email" type="email" placeholder="E-mail" autocomplete="email">
+                    <!-- <input class="input" type="email" formControlName="name" autocomplete="name" placeholder="Name" readonly="false"> -->
+                </div>
+            </div>
+            <div class="input-div two focus">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <!-- <input class="input" formControlName="password" type="password" disabled="true" placeholder="Password" autocomplete="password"> -->
+                    <input class="input" formControlName="password" type="password" placeholder="Password" autocomplete="password">
+                </div>
+            </div>
+
+            <a href="#">Forgot Password?</a>
+            <input type="submit" class="btn" value="login" [disabled]="!loginForm.valid">
+        </form>
+
+    </div>
+</div>

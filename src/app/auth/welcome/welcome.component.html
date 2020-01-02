@@ -1,0 +1,39 @@
+<body>
+    <div class="top-bar">
+        <span class="top-bar-button red" id="close-btn"></span>
+        <span class="top-bar-button yellow" id="min-btn"></span>
+        <span class="top-bar-button green" id="max-btn"></span>
+    </div>
+    <header class="header air-2">
+        <img class="logo" src="../../../assets/logo.png" alt="Logo de Travel RS" />
+        <span class="welcome-text air-3">Welcome to Travel RS!</span>
+
+
+    </header>
+    <div class="welcome unselectable">
+        <div class="welcome-image air-baloon"></div>
+        <div class="welcome-image paper-plane"></div>
+        <div class="welcome-image dog"></div>
+        <div class="welcome-image ufo"></div>
+        <div class="welcome-image baloon"></div>
+        <div class="welcome-content">
+
+            <ng-container *ngIf="!(authenticated$ | async) ">
+
+                <div class="button-wrapper">
+                    <span id="welcome-button" class="welcome-button blue " active routerLink="login" routerLinkActive="active">Logar
+          <svg class=" button-arrow " fill="white " version="1.1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 9 14 " style="enable-background:new 0 0 9 14; " xml:space="preserve ">
+            <polygon points="0.6,11.8 5.4,7 0.6,2.2 2.1,0.8 8.4,7 2.1,13.2 "/> -->
+                 </svg>
+                </span>
+                    <br>
+                    <span id="welcome-button" class="welcome-button red  " active routerLink="register" routerLinkActive="active">Cadastra-se
+                  <svg class=" button-arrow " fill="white " version="1.1 " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink " x="0px " y="0px " viewBox="0 0 9 14 " style="enable-background:new 0 0 9 14; " xml:space="preserve ">
+                    <polygon points="0.6,11.8 5.4,7 0.6,2.2 2.1,0.8 8.4,7 2.1,13.2 "/> -->
+                         </svg>
+                        </span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</body>
